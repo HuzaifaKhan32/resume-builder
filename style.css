@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background: linear-gradient(to right, #9456f1, #AF65C7, #DB7D83, #FE904E);
+    padding: 10vh 0px;
+    width: 100vw;
+    background-position: center;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.poppins-regular {
+    font-family: "Poppins", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.container {
+    width: 60%;
+    background-color: white;
+    height: auto;
+    border-radius: 8px;
+    display: flex;
+    position: relative;
+    z-index: 100;
+}
+
+.container::-webkit-scrollbar {
+    display: none;
+}
+
+.left {
+    width: 40%;
+    height: 100%;
+    position: relative;
+}
+
+.left .white {
+    height: 30%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: #232323;
+    padding: 2vh;
+    border-top-left-radius: 8px;
+}
+
+.left .profile-photo {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+}
+
+.left .profile-photo .profile-image {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.left .frame {
+    height: auto;
+    width: 100%;
+    background-color: #232323;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1vw;
+    padding-bottom: 1.5vh;
+    text-align: center;
+    flex-direction: column;
+    border-bottom-left-radius: 8px;
+}
+
+
+.left .frame .good-name h1 {
+    font-size: 2.2rem;
+}
+
+.left .frame .About {
+    margin-top: 25px;
+    line-height: 8vh;
+    text-wrap: wrap;
+}
+
+.left .frame .About p {
+    font-size: 14px;
+
+}
+
+.left .frame .contact h2 {
+    line-height: 8vh;
+}
+
+
+
+.left .frame .contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 25px;
+    overflow-wrap: break-word;
+    height: auto;
+}
+
+.left .frame .contact p {
+    text-wrap: wrap;
+}
+
+.right {
+    width: 60%;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-top: 3vh;
+}
+
+.right .similar-styling {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 70%;
+    align-items: flex-end;
+}
+
+.right .field-heading {
+    width: 100%;
+    background-color: #232323;
+    font-weight: 800;
+    text-align: start;
+    color: white;
+    line-height: 6vh;
+    padding: 0px 2vw;
+    font-size: 1.7rem;
+}
+
+.right .similar-styling p {
+    padding: 2vh 2vw;
+    text-align: start;
+    line-height: 4vh;
+    width: 100%;
+}
+
+.wrap {
+    overflow-wrap: break-word;
+}
+
+.contact-details {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: auto;
+    overflow-wrap: break-word;
+}
+
+
+@media only screen and (max-width : 1094px) {
+    .container {
+        width: 90%;
+        flex-direction: column;
+    }
+
+    .left {
+        width: 100%;
+    }
+
+    .white {
+        background-color: #232323;
+    }
+
+    .right {
+        width: 100%;
+    }
+
+    .right {
+        align-items: flex-start;
+    }
+
+    .right .similar-styling {
+        width: 100%;
+        align-items: flex-start;
+    }
+
+    .right .similar-styling .field-heading {
+        width: 70%;
+    }
+
+    .left .frame {
+        border-bottom-left-radius: 0px;
+    }
+
+    .left .white {
+        border-top-right-radius: 8px;
+    }
+
+    .right .similar-styling p {
+        line-height: 3.2vh;
+    }
+
+    .about-para {
+        font-size: 1.2rem;
+    }
+
+    .designation {
+        font-size: 1.2rem;
+    }
+
+}
+
+@media only screen and (min-width: 806px) and (max-width: 1024px) {
+
+    .about-para {
+        font-size: 2rem;
+    }
+
+    .designation {
+        font-size: 2rem;
+    }
+
+    .right .similar-styling p {
+        font-size: 2rem;
+        line-height: 4vh;
+    }
+}
