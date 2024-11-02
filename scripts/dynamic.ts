@@ -28,6 +28,7 @@ const skillsInput = document.querySelector(".skills") as HTMLInputElement;
 const handleDynamicClick = (event: Event) => {
     event.preventDefault();
     window.location.href = "../form.html";
+    localStorage.clear();
 };
 
 // function to navigate from any page to dynamic or static resume

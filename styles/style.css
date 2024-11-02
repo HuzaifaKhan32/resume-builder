@@ -121,6 +121,7 @@ body {
 
 .left .frame .good-name h1 {
     font-size: 2.2rem;
+    overflow-wrap: anywhere;
 }
 
 .left .frame .About {
