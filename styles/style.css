@@ -14,11 +14,11 @@ body {
     background-position: center;
     background-size: contain;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     position: relative;
     z-index: 10;
-
+    flex-direction: column;
 }
 
 ::-webkit-scrollbar {
@@ -31,6 +31,29 @@ body {
     font-style: normal;
 }
 
+.navigation-buttons{
+    display: flex;
+}
+
+.navigation-buttons a{
+    background-color: #232323;
+    border: none;
+    cursor: pointer;
+    padding: 2vh 3vw;
+    text-align: center;
+    color: white;
+    border-radius: 8px;
+    margin: 4vh;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: all 0.3s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.navigation-buttons a:hover{
+    background-color: #3b3939;
+}
+
 .container {
     width: 60%;
     background-color: white;
@@ -39,6 +62,7 @@ body {
     display: flex;
     position: relative;
     z-index: 100;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 
 .container::-webkit-scrollbar {
@@ -104,9 +128,9 @@ body {
     text-wrap: wrap;
 }
 
-.left .frame .About p {
-    font-size: 14px;
-
+.left .frame .about-para {
+    overflow-wrap: break-word;
+    width: 100%;
 }
 
 .left .frame .contact h2 {
@@ -127,6 +151,7 @@ body {
 
 .left .frame .contact p {
     text-wrap: wrap;
+    overflow-wrap: anywhere;
 }
 
 .right {

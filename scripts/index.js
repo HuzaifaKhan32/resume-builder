@@ -1,3 +1,4 @@
+var _a, _b;
 var nameElement = document.querySelector(".good-name h1");
 var designationElement = document.querySelector(".designation");
 var aboutElement = document.querySelector(".about-para");
@@ -8,6 +9,17 @@ var websiteElement = document.querySelector(".website");
 var educationElement = document.querySelector(".education p");
 var experienceElement = document.querySelector(".Experience p");
 var skillsElement = document.querySelector(".skills p");
+var handleDynamicClick = function (event) {
+    event.preventDefault();
+    window.location.href = "../form.html";
+};
+var handleResumeClick = function (event) {
+    event.preventDefault();
+    window.location.href = "../index.html";
+};
+(_a = document.querySelector(".dynamic-button")) === null || _a === void 0 ? void 0 : _a.addEventListener("click", handleDynamicClick);
+(_b = document.querySelector(".Resume-button")) === null || _b === void 0 ? void 0 : _b.addEventListener("click", handleResumeClick);
+//For static resume
 if (nameElement) {
     nameElement.textContent = "Huzaifa Nadeem";
 }

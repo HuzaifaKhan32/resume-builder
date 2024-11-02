@@ -1,4 +1,3 @@
-
 const nameElement = document.querySelector(".good-name h1") as HTMLHeadingElement;
 const designationElement = document.querySelector(".designation") as HTMLDivElement;
 const aboutElement = document.querySelector(".about-para") as HTMLParagraphElement;
@@ -11,7 +10,27 @@ const websiteElement = document.querySelector(".website") as HTMLParagraphElemen
 const educationElement = document.querySelector(".education p") as HTMLParagraphElement;
 const experienceElement = document.querySelector(".Experience p") as HTMLParagraphElement;
 const skillsElement = document.querySelector(".skills p") as HTMLParagraphElement;
+ 
 
+
+const handleDynamicClick = (event : Event) => {
+    event.preventDefault();
+    window.location.href = "../form.html"
+}
+
+const handleResumeClick = (event : Event) => {
+    event.preventDefault();
+    window.location.href = "../index.html"
+}
+
+
+
+
+document.querySelector(".dynamic-button")?.addEventListener("click", handleDynamicClick);
+document.querySelector(".Resume-button")?.addEventListener("click", handleResumeClick);
+
+
+//For static resume
 if (nameElement) {
     nameElement.textContent = "Huzaifa Nadeem";
 }
@@ -50,3 +69,5 @@ if (skillsElement){
 
     skillsElement.textContent = "HTML, CSS, JavaScript, TypeScript, React.js, Next.js, Tailwind";
 }
+
+

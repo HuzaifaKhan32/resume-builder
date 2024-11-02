@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/form.css">
+    <link rel="stylesheet" href="/styles/style.css">
+    <title>Resume Form</title>
+</head>
+
+<body class="poppins-regular">
+    <div class="navigation-buttons">
+        <a class="Resume-button">Resume</a>
+        <a class="dynamic-button">Dynamic Resume</a>
+    </div>
+    <div class="form">
+        <form>
+
+            <div class="form-heading">
+                <h1>Resume Form</h1>
+            </div>
+            <div class="input-container">
+                <div class="name">
+                    <h2>Fullname</h2>
+                    <input type="text" placeholder="Enter your fullname" class="fullname" required>
+                </div>
+                <div class="designation-input">
+                    <h2>Designation</h2>
+                    <input type="text" placeholder="Enter your designation" class="Designation" required>
+                </div>
+                <div class="address-container">
+                    <h2>Address</h2>
+                    <input type="text" placeholder="Enter your address" class="Address">
+                </div>
+                <div class="designation-input">
+                    <h2>Phone Number</h2>
+                    <input type="text" placeholder="Enter your Phone Number" class="Phone-number" required>
+                </div>
+                <div class="email-container">
+                    <h2>Email</h2>
+                    <input type="text" placeholder="Enter your fullname" class="email" required>
+                </div>
+                <div class="website-link-container">
+                    <h2>Website Link</h2>
+                    <input type="text" placeholder="Enter your website link" class="website">
+                </div>
+                <div class="education-container">
+                    <h2>Education</h2>
+                    <textarea placeholder="Enter about your education" class="education" required></textarea>
+                </div>
+                <div class="Skills" container>
+                    <h2>Skills</h2>
+                    <textarea placeholder="Enter about your skills" class="skills" required></textarea>
+                </div>
+                <div class="experience-container">
+                    <h2>Experience</h2>
+                    <textarea placeholder="Enter about your experience" class="experience" required></textarea>
+                </div>
+                <div class="about-me-container">
+                    <h2>About Me</h2>
+                    <textarea placeholder="Enter about yourself" class="about-me" required></textarea>
+                </div>
+
+                <div class="about-me-container">
+                    <h2>Profile Image</h2>
+                    <input type="file" class="profile-path" accept="image/png, image/jpeg">
+                </div>
+                <div class="submit">
+                    <input type="submit" class="form-submit poppins-regular" value="Build Resume" />
+                </div>
+            </div>
+        </form>
+
+    </div>
+    <script src="/scripts/index.js"></script>
+    <script src="/scripts/dynamic.js"></script>
+</body>
+
+</html>
