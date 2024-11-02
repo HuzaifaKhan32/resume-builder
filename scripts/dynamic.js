@@ -1,4 +1,4 @@
-var _a, _b, _c;
+var _a, _b, _c, _d;
 // Selecting HTML tags for inserting input values
 var nameElement = document.querySelector(".good-name");
 var designationElement = document.querySelector(".designation");
@@ -34,7 +34,6 @@ var handleResumeClick = function (event) {
 // function for submit handling
 var handleSubmit = function (event) {
     event.preventDefault();
-    // clearing localstorage before storing the values
     localStorage.clear();
     localStorage.setItem("name", fullNameInput.value);
     localStorage.setItem("designation", designationInput.value);
@@ -82,9 +81,37 @@ var loadDataOnPage = function () {
         skillsElement.innerHTML = "<p class=\"wrap\">".concat(localStorage.getItem("skills"), "</p>");
     }
 };
+var preFilled = function () {
+    if (fullNameInput && localStorage.getItem("name"))
+        fullNameInput.value = localStorage.getItem("name") || "";
+    if (designationInput && localStorage.getItem("designation"))
+        designationInput.value = localStorage.getItem("designation") || "";
+    if (aboutInput && localStorage.getItem("about"))
+        aboutInput.value = localStorage.getItem("about") || "";
+    if (addressInput && localStorage.getItem("address"))
+        addressInput.value = localStorage.getItem("address") || "";
+    if (phoneInput && localStorage.getItem("phone"))
+        phoneInput.value = localStorage.getItem("phone") || "";
+    if (websiteInput && localStorage.getItem("website"))
+        websiteInput.value = localStorage.getItem("website") || "";
+    if (emailInput && localStorage.getItem("email"))
+        emailInput.value = localStorage.getItem("email") || "";
+    if (experienceInput && localStorage.getItem("experience"))
+        experienceInput.value = localStorage.getItem("experience") || "";
+    if (educationInput && localStorage.getItem("education"))
+        educationInput.value = localStorage.getItem("education") || "";
+    if (skillsInput && localStorage.getItem("skills"))
+        skillsInput.value = localStorage.getItem("skills") || "";
+};
+var handleEdit = function (event) {
+    event.preventDefault();
+    window.location.href = "../form.html";
+};
+document.addEventListener("DOMContentLoaded", preFilled);
 (_a = document.querySelector("form")) === null || _a === void 0 ? void 0 : _a.addEventListener("submit", handleSubmit); // form submission button
 (_b = document.querySelector(".dynamic-button")) === null || _b === void 0 ? void 0 : _b.addEventListener("click", handleDynamicClick); // form navigation
 (_c = document.querySelector(".Resume-button")) === null || _c === void 0 ? void 0 : _c.addEventListener("click", handleResumeClick); // resume navigation
+(_d = document.querySelector(".editable")) === null || _d === void 0 ? void 0 : _d.addEventListener("click", handleEdit);
 if (window.location.pathname == "/dynamic.html") {
     loadDataOnPage();
 }

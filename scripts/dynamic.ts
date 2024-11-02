@@ -39,9 +39,7 @@ const handleResumeClick = (event: Event) => {
 // function for submit handling
 const handleSubmit = (event: Event) => {
     event.preventDefault();
-
-    // clearing localstorage before storing the values
-    localStorage.clear();
+    localStorage.clear()
     localStorage.setItem("name", fullNameInput.value);
     localStorage.setItem("designation", designationInput.value);
     localStorage.setItem("about", aboutInput.value);
@@ -57,7 +55,7 @@ const handleSubmit = (event: Event) => {
     window.location.href = "../dynamic.html";
 };
 
-    // function to fetch values from localstorage and insert into its corresponding categories
+// function to fetch values from localstorage and insert into its corresponding categories
 const loadDataOnPage = () => {
     if (nameElement && localStorage.getItem("name")) {
         nameElement.innerHTML = `<h1>${localStorage.getItem("name")}</h1>`;
@@ -91,10 +89,40 @@ const loadDataOnPage = () => {
     }
 };
 
+const preFilled = () => {
+    if(fullNameInput && localStorage.getItem("name")) fullNameInput.value = localStorage.getItem("name") || "";
 
+    if(designationInput && localStorage.getItem("designation")) designationInput.value = localStorage.getItem("designation") || "";
+
+    if(aboutInput && localStorage.getItem("about")) aboutInput.value = localStorage.getItem("about") || "";
+
+    if(addressInput && localStorage.getItem("address")) addressInput.value = localStorage.getItem("address") || "";
+
+    if(phoneInput && localStorage.getItem("phone")) phoneInput.value = localStorage.getItem("phone") || "";
+
+    if(websiteInput && localStorage.getItem("website")) websiteInput.value = localStorage.getItem("website") || "";
+
+    if(emailInput && localStorage.getItem("email")) emailInput.value = localStorage.getItem("email") || "";
+
+    if(experienceInput && localStorage.getItem("experience")) experienceInput.value = localStorage.getItem
+    ("experience") || "";
+
+    if(educationInput && localStorage.getItem("education")) educationInput.value = localStorage.getItem("education") || "";
+
+    if(skillsInput && localStorage.getItem("skills")) skillsInput.value = localStorage.getItem("skills") || "";
+    
+}
+
+const handleEdit = (event : Event) => {
+    event.preventDefault();
+    window.location.href = "../form.html"
+}
+
+document.addEventListener("DOMContentLoaded", preFilled);
 document.querySelector("form")?.addEventListener("submit", handleSubmit); // form submission button
 document.querySelector(".dynamic-button")?.addEventListener("click", handleDynamicClick); // form navigation
 document.querySelector(".Resume-button")?.addEventListener("click", handleResumeClick); // resume navigation
+document.querySelector(".editable")?.addEventListener("click", handleEdit);
 
 if (window.location.pathname == "/dynamic.html") {
     loadDataOnPage();
